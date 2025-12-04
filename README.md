@@ -5,7 +5,7 @@ This project builds a machine learning model that predicts house prices in Banga
 
 ---
 <div align="center">
-  <img src="[client/screenshot .png](https://github.com/arsalan-99/House_Price_prediction_model/blob/main/client/Screenshot%20.png)" alt="Web App Preview" width="600">
+  <img src="[client/screenshot.png](https://github.com/arsalan-99/House_Price_prediction_model/blob/main/client/Screenshot%20.png)" alt="Web App Preview" width="600">
 </div>
 
 <div align="center">

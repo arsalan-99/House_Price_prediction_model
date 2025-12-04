@@ -5,6 +5,10 @@ This project builds a machine learning model that predicts house prices in Banga
 
 ---
 <div align="center">
+  <img src="House" alt="Web App Preview" width="600">
+</div>
+
+<div align="center">
 
 ## 📦 **Tools, Libraries & Techniques Used**
 

@@ -1,7 +1,8 @@
-# 🏡 Bangalore House Price Prediction Model
+#  Bangalore House Price Prediction Model
 
-### 📘 Introduction
-This project builds a machine learning model that predicts house prices in Bangalore using key features such as location, total square footage, number of bathrooms, and BHK count. The dataset undergoes thorough preprocessing, including cleaning, outlier removal, feature engineering, and one-hot encoding to ensure high-quality inputs. A Linear Regression model is then trained on the prepared data, achieving around 85% accuracy. The final model can estimate property prices for any given combination of location and home characteristics, making it suitable for integration into web applications or real estate tools.
+
+This project builds a machine learning model that predicts house prices in Bangalore using key features such as location, total square footage, number of bathrooms, and BHK count. The dataset undergoes thorough preprocessing, including cleaning, outlier removal, feature engineering, and one-hot encoding to ensure high-quality inputs. 
+  A Linear Regression model is then trained on the prepared data, achieving around 85% accuracy. The final model can estimate property prices for any given combination of location and home characteristics, making it suitable for integration into web applications or real estate tools.
 
 ---
 <div align="center">
@@ -9,6 +10,7 @@ This project builds a machine learning model that predicts house prices in Banga
 </div>
 
 <div align="center">
+
 
 ## 📦 **Tools, Libraries & Techniques Used**
 

@@ -51,6 +51,5 @@ This project builds a machine learning model that predicts house prices in Banga
 
 ### **🤖 Machine Learning Model**
 - **Algorithm:** Linear Regression  
-- **Train/Test Split:** 80% / 20%  
-- **Model Accuracy:** ~ **84.5% (R² Score)**  
+- **Model Accuracy:** ~ **84.5%**  
 

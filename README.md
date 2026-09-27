@@ -1,54 +1,48 @@
-#  Bangalore House Price Prediction Model
+# Bangalore House Price Prediction
 
+A machine learning web app that estimates home prices in Bangalore based on square footage, bedrooms, bathrooms, and location. Built with a scikit-learn model, a Flask backend, and a simple web UI.
 
-This project builds a machine learning model that predicts house prices in Bangalore using key features such as location, total square footage, number of bathrooms, and BHK count. The dataset undergoes thorough preprocessing, including cleaning, outlier removal, feature engineering, and one-hot encoding to ensure high-quality inputs. <br>
-  A Linear Regression model is then trained on the prepared data, achieving around 85% accuracy. The final model can estimate property prices for any given combination of location and home characteristics, making it suitable for integration into web applications or real estate tools.
-
----
-<div align="center">
-  <img src="client/Screenshot.png" alt="Web App Preview" width="600">
-</div>
+## Preview
 
 <div align="center">
-
-
-## 📦 **Tools, Libraries & Techniques Used**
-
+  <img src="frontend/Screenshot.png" alt="Web App Preview" width="600">
 </div>
 
-### **🔧 Libraries used:**
-- **Pandas** – Data cleaning & manipulation  
-- **NumPy** – Numerical operations  
-- **Matplotlib** – Data visualization  
-- **Scikit-Learn**  
-  - Train–test split  
-  - Linear Regression model   
+## Tech Stack
 
----
+- Python
+- Scikit-learn
+- Pandas
+- NumPy
+- Flask
+- HTML
+- CSS
+- JavaScript (jQuery)
 
-### **🧹 Data Cleaning & Preprocessing**
-- Dropped irrelevant columns:  
-  `area_type`, `availability`, `society`, `balcony`
-- Removed missing values  
-- Converted mixed-format `total_sqft` values (e.g., `"2100 - 2850"`) to numeric  
-- Removed extreme outliers:
-  - Unrealistic BHK counts  
-  - Total sqft per BHK < 300  
-  - Extreme price-per-sqft values   
-- Grouped rare locations as `"others"`  
-- One-hot encoded 242 location categories   
+## How It Works
 
----
+- **Model training**: The dataset (`Bengaluru_House_Data.csv`) is cleaned in a Jupyter notebook (`model/home_prices_model.ipynb`), where outliers are removed, rare locations are grouped, and categorical locations are one-hot encoded. A Linear Regression model is trained and exported as a pickle file alongside the column definitions.
+- **Backend API**: A Flask server in `server/` loads the trained pickle model and column list into memory on startup. It exposes `/get_location_names` to fetch available locations and `/predict_home_price` to calculate price estimates.
+- **Frontend UI**: A lightweight webpage in `frontend/` takes user inputs (area, BHK, bathrooms, location) and sends an AJAX request to the Flask server to display the estimated price in Lakhs.
 
-### **🗂️ Dataset & Features**
-- Features used after cleaning:
-  - `total_sqft`
-  - `number of bathrooms`
-  - `bhk`
-  - One-hot encoded location columns 
+## Run It
 
----
+1. Clone the repository and install dependencies:
 
-### **🤖 Machine Learning Model**
-- **Algorithm:** Linear Regression  
-- **Model Accuracy:** ~ **84.5%**  
+```bash
+git clone https://github.com/arsalan-99/House_Price_prediction_model.git
+cd House_Price_prediction_model
+
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+2. Start the server:
+
+```bash
+cd server
+python server.py
+```
+
+3. Open `frontend/app.html` in your browser.
